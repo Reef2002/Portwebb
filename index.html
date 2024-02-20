@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal Portfolio">
+    <meta name="keywords" content="about, services, portfolio, contact">
+    <meta name="author" content="Arrif Yan-at">
     <title>Personal Portfolio Website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/fd1eb4e0bd.js" crossorigin="anonymous"></script>
@@ -11,7 +14,8 @@
     <div id="header">
         <div class= "container"></div>
             <nav>
-                <div class="portfolio">PORTFOLIO</div>
+                <div class="portfolio">PORTFOLio</div>
+                
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
@@ -26,24 +30,19 @@
                 <p>UI/UX Design</p>
                 <h1>Hi, I'm <span>Arrif</span> From Thailand</h1>
                 <h2>Nice to meet you!</h2>
-                <div class="box">
-                    <div class="content">
-                        <img src="images/ggg.jpg">
-                        <h2>Arrif Yan-0at<br><span>UX/UI Designer</span></h2>
-                        <a href="#contact">Hire me</a>
-                    </div>
-                </div>
+              
             </div>
-        
         </div>
-    </div>
     <!-- About -->
 <div id="about">
     <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/Bangkapi.jpg">
+            </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</menu></h1>
-                <p>damndamndamndamndamndamndamnda <br> mndamndamndamndamndamndamn</p>
-
+                <p>I am a highly motivated and dedicated person. I am very eager and ready to gain new experiences to improve myself. I have incredibly passionate for learning new things to work effectively, also I am an adaptable person which can help resulting in good work results. I strongly believe that with my dedication and the will to gain diverse experiences can be used to develop an organization, and make the organization grow, advance and move towards success. I am confident that the organization will gain benefits and value using my knowledge.</p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('education')">Education</p>
@@ -80,7 +79,7 @@
                 <i class="fa-solid fa-microchip"></i>
                 <h2>UX/UI Design</h2>
                 <p>Creating a good overall experience for people using a product, involving research and testing.</p>
-                <a href="#">Learn more</a>
+                <a href="https://www.figma.com/proto/MKGmo8Ntax6fV6o9fNekTH/Football?type=design&node-id=2-445&t=4kTUQ9RdX35nsnle-0&scaling=scale-down&page-id=0%3A1">Learn more</a>
             </div>
         </div>
     </div>
@@ -123,13 +122,13 @@
         <div class="row">
             <div class="contact-left">
                 <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>arrifkak123@gmail.com</p>
+                <p><i class="fa-solid fa-paper-plane"></i>arrif.yanat@gmail.com</p>
                 <p><i class="fa-solid fa-phone-volume"></i>063-9381980</p>
                 <div class="social-icons">
                     <a href="https://facebook.com/rrieyf"><i class="fa-brands fa-square-facebook"></i></a>
                     <a href="https://www.instagram.com/rrieyf/"><i class="fa-brands fa-square-instagram"></i></a>
                 </div>
-                <a href="images/Arrif Yan-at Resume.pdf" download class="btn btn2">Download CV</a>
+                <a href="images/Arrif_Yanat_CV.pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
                 <form name="submit-to-google-sheet">
@@ -142,10 +141,10 @@
             </div>
         </div>
     </div>
-    <div class="copyright">
-        <p>Copyright © Arrif. Made with <i class="fa-solid fa-heart"></i></p>
-    </div>
+    <div class="copyright"> <p>Copyright © Arrif. Made with <i class="fa-solid fa-heart"></i></p></div>
 </div>
+
+
 
 <script>
 
@@ -177,25 +176,6 @@ function opentab(tabname){
     }
 
 </script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycby95onui_PdTWg-6gVVlpqVdou0lwQm-aNjMgHZzjLF99E1oOYFDoNSI07PbceLxokQ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML = "Message sent successfully."
-            setTimeout(function(){
-                msg.innerHTML = ""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>
-
 </body>
 </html></nav>
                 
