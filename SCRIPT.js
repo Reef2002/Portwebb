@@ -1,18 +1,20 @@
-const goTopBtn = document.querySelector('.go-top-btn');
+var counterContainer = document.querySelector(".website-counter");
+var resetButton = document.querySelector("#reset");
+var visitCount = localStorage.getItem("page_view");
 
-window.addEventListener('scroll', checkHeight)
-
-function checkHeight(){
-    if(window.scrollY > 200) {
-        goTopBtn.style.display = "flex"
-    } else {
-        goTopBtn.style.display = "none"
-    }
+// Check if page_view entry is present
+if (visitCount) {
+  visitCount = Number(visitCount) + 1;
+  localStorage.setItem("page_view", visitCount);
+} else {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
 }
+counterContainer.innerHTML = visitCount;
 
-goTopBtn.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-    })
-})
+// Adding onClick event listener
+resetButton.addEventListener("click", () => {
+  visitCount = 1;
+  localStorage.setItem("page_view", 1);
+  counterContainer.innerHTML = visitCount;
+});
