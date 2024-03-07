@@ -371,7 +371,20 @@ nav .fa-solid{
     margin-top: 15px;
     font-size: 10px;
 }
-
+.go-top-btn{
+    position: fixed;
+    bottom: 35px;
+    right: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 50px;
+    width: 50px;
+    background: #FFF;
+    border: 3px solid #262626;
+    display: block;
+    justify-content: center;
+    align-content: center;
+}
 @media only screen and (max-width: 600px){
 
     .portfolio{

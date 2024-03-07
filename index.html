@@ -135,9 +135,9 @@
                 <a href="images/Arrif_Yanat_CV (2).pdf" download class="btn btn2">Download CV</a>
             </div>
             <div class="contact-right">
-                <form name="submit-to-google-sheet">
+                <form id="contactForm">
                     <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required>
+                    <input type="email" id="email" name="Email" placeholder="Your Email (Gmail)" required pattern="[a-z0-9._%+\-]+@gmail.com">
                     <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
                     <button type="submit" class="btn btn2">Submit</button>
                 </form>
@@ -147,6 +147,17 @@
     </div>
     <div class="copyright"> <p>Copyright © Arrif. Made with <i class="fa-solid fa-heart"></i></p>
 </div>
+</div>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  var email = document.getElementById("email").value;
+  if (!email.endsWith("@gmail.com")) {
+    alert("Please enter a Gmail address only.");
+    event.preventDefault();
+  }
+});
+</script>
 <html>
   <head>
     <title>Website Counter</title>
@@ -156,11 +167,13 @@
   <body>
     <div>Website visit count:</div>
     <div class="website-counter"></div>
-    <button id="reset">Reset</button>
+    <button class="go-top-btn"><a href="#"><i class="fa-solid fa-arrow-up"></i></a></button>
+
+
   </body>
 </html>
 
-
+    
 <script src="SCRIPT.js"></script>
 
 <script>

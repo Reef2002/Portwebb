@@ -18,3 +18,16 @@ resetButton.addEventListener("click", () => {
   localStorage.setItem("page_view", 1);
   counterContainer.innerHTML = visitCount;
 });
+
+//scroll up
+const goTopBtn = document.querySelector('.go-top-btn');
+
+window.addEventListener('scroll', checkHeight)
+
+function checkHeight(){
+  if(window.scrollY > 200) {
+    goTopBtn.style.display = "block" 
+  } else{
+    goTopBtn.style.display = "none"
+  }
+}
