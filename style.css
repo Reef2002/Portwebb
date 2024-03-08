@@ -39,7 +39,9 @@ nav{
     flex-wrap: wrap;
     margin-top: 5%;
 }
-
+.search-container{
+    margin-right: 5%;
+}
 .portfolio{
     font-family: myFont;
     font-size: 70px;
@@ -50,7 +52,7 @@ nav{
 nav ul li{
     display: inline-block;
     list-style: none;
-    margin-right: 80px;
+    margin-right: 50px;
 }
 nav ul li a{
     color: #FFF;
